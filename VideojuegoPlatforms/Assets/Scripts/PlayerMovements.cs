@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMovements : MonoBehaviour
 {
+
+
     [Header ("Movement")]
     public float Speed;
     public float jumpForce;
@@ -57,6 +59,7 @@ public class PlayerMovements : MonoBehaviour
         } 
 
     }
+
 
 
 }
