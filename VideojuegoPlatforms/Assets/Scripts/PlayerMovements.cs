@@ -61,6 +61,9 @@ public class PlayerMovements : MonoBehaviour
             Destroy(other.gameObject);
             Speed = 25;
         }
+         if(other.tag == "Masks"){
+             Destroy(other.gameObject);
+         }
     }
 
     void Update(){
