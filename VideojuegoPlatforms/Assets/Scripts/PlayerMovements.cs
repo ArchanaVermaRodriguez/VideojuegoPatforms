@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlayerMovements : MonoBehaviour
 {
+
 
 
     [Header ("Movement")]
@@ -30,6 +32,10 @@ public class PlayerMovements : MonoBehaviour
     private float boostTimer;
     private bool boosting;
 
+
+
+
+
     private Rigidbody2D rb;
  
     void Start()
@@ -42,6 +48,9 @@ public class PlayerMovements : MonoBehaviour
         originalXScale = transform.localScale.x;
         boostTimer = 0;
         boosting = false;
+
+ 
+        
     }
 
     // Update is called once per frame
@@ -64,6 +73,10 @@ public class PlayerMovements : MonoBehaviour
          if(other.tag == "Masks"){
              Destroy(other.gameObject);
          }
+         if(other.tag =="Sneeze"){
+             
+         }
+        
     }
 
     void Update(){
@@ -94,7 +107,24 @@ public class PlayerMovements : MonoBehaviour
             }
         }
 
+
+
     }
+
+
+// para que se suba a la platform pero no sirve 
+   /* void OnCollisionEnter2D(Collision2D col){
+        if(col.gameObject.name.Equals("PlatformMovements")){
+            this.transform.parent = col.transform;
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D col){
+         if(col.gameObject.name.Equals("PlatformMovements")){
+            this.transform.parent = null;
+         }
+    }*/
+
 
 
     

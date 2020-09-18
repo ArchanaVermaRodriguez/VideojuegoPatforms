@@ -22,4 +22,15 @@ public class SneezeDrops : MonoBehaviour
     
 
     void Awake () { Destroy (gameObject, lifeTime); }
+
+    void OnTriggerEnter2D(Collider2D other){
+
+        if(other.tag == "Player"){
+           GameControl.Health-=1;
+           Destroy(gameObject);
+        }
+        if(other.tag == "Bullet"){
+            Destroy(gameObject);
+        }
+    }
 }

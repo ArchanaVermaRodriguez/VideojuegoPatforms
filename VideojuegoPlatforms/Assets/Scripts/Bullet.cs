@@ -29,6 +29,7 @@ public class Bullet : MonoBehaviour
     }else if(other.gameObject.GetComponent<SneezeDrops>()){
         Debug.Log(other.gameObject.name);
         Destroy(gameObject);
+        
     }
 
     }

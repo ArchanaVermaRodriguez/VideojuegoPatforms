@@ -7,6 +7,9 @@ TagManager:
   - Platform
   - Poder
   - Masks
+  - Sneeze
+  - RainDrops
+  - Bullet
   layers:
   - Default
   - TransparentFX

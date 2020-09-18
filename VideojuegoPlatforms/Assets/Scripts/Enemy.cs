@@ -17,12 +17,15 @@ public class Enemy : MonoBehaviour
 
     public float moveSpeed;
 
+    public GameObject WinnerText;
+
     Rigidbody2D rb2d;
     // Start is called before the first frame update
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
         InvokeRepeating("Shoot", 0,1.5f); 
+        WinnerText.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -43,6 +46,7 @@ public class Enemy : MonoBehaviour
 
         if( Life <= 0 ){
             Destroy(gameObject);
+            WinnerText.gameObject.SetActive(true);
         } 
     }
 

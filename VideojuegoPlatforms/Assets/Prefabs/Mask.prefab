@@ -15,7 +15,7 @@ GameObject:
   m_Layer: 0
   m_Name: Mask
   m_TagString: Masks
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -97,18 +97,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.07706261, y: -0.10274887}
+  m_Offset: {x: 0.048360348, y: -0.05381775}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.5789475, y: 6.5789475}
+    oldSize: {x: 4.032258, y: 4.032258}
     newSize: {x: 25, y: 25}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.322071, y: 4.215689}
+  m_Size: {x: 3.8254042, y: 2.52245}
   m_EdgeRadius: 0
 --- !u!114 &7134116696506936891
 MonoBehaviour:
