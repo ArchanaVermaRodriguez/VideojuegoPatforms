@@ -10,6 +10,8 @@ public class PlatformMovements : MonoBehaviour
     public Transform startPos;
     Vector3 nextPos;
 
+    public Transform prevParent;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,5 +35,21 @@ public class PlatformMovements : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawLine(pos1.position, pos2.position);
+    }
+
+
+     private void OnCollisionEnter2D(Collision2D other){
+        GameObject colObj = other.gameObject;
+        if(colObj.CompareTag("Player")){
+            prevParent = colObj.transform.parent;
+            colObj.transform.parent = gameObject.transform;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D other){
+        GameObject colObj = other.gameObject;
+        if(colObj.CompareTag("Player")){
+            colObj.transform.parent = prevParent;
+        }
     }
 }

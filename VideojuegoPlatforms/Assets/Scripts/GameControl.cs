@@ -42,12 +42,14 @@ public class GameControl : MonoBehaviour
            Heart2.gameObject.SetActive(true);
            Heart3.gameObject.SetActive(false);
            Heart.gameObject.SetActive(true);
+         
            break;
 
            case 1:
            Heart1.gameObject.SetActive(true);
            Heart2.gameObject.SetActive(false);
            Heart3.gameObject.SetActive(false);
+            Heart.gameObject.SetActive(true);
            break;
 
            case 0:

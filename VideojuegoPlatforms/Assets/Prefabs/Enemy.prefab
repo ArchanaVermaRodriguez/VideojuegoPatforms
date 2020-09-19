@@ -182,6 +182,7 @@ MonoBehaviour:
   Player: {fileID: 0}
   Range: 17
   moveSpeed: 1.5
+  WinnerText: {fileID: 0}
 --- !u!1 &7535003025317430898
 GameObject:
   m_ObjectHideFlags: 0

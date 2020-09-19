@@ -9,7 +9,7 @@ public class PlayerMovements : MonoBehaviour
 
 
     [Header ("Movement")]
-    private float Speed;
+    public float Speed;
     public float jumpForce;
     public float moveInput;
     public static int direction=1;
@@ -26,21 +26,21 @@ public class PlayerMovements : MonoBehaviour
     public float checkRadious;
     public LayerMask whatIsGround;
     private int extraJumps=1;// de aquí se resta el valor de extraJumpsValues
-    public int extraJumpsValue=1;// valor de los saltos extras 
+    public int extraJumpsValue=2;// valor de los saltos extras 
   
     [Header("Poder")]
     private float boostTimer;
     private bool boosting;
 
-
-
+    
+    public Vector3 startPosition;
 
 
     private Rigidbody2D rb;
  
     void Start()
     {
-        Speed = 5;
+        
         moving = false;
         extraJumps= extraJumpsValue;
         rb= GetComponent<Rigidbody2D>();
@@ -49,7 +49,9 @@ public class PlayerMovements : MonoBehaviour
         boostTimer = 0;
         boosting = false;
 
- 
+        
+
+        SaveCheckpoint();
         
     }
 
@@ -73,7 +75,12 @@ public class PlayerMovements : MonoBehaviour
          if(other.tag == "Masks"){
              Destroy(other.gameObject);
          }
-         if(other.tag =="Sneeze"){
+        
+         if(other.tag =="Edge"){
+           
+            Restart();
+         }
+          if(other.tag =="Sneeze"){
              
          }
         
@@ -112,21 +119,12 @@ public class PlayerMovements : MonoBehaviour
     }
 
 
-// para que se suba a la platform pero no sirve 
-   /* void OnCollisionEnter2D(Collision2D col){
-        if(col.gameObject.name.Equals("PlatformMovements")){
-            this.transform.parent = col.transform;
-        }
+  private void SaveCheckpoint(){
+        startPosition = gameObject.transform.position;
     }
 
-    void OnCollisionExit2D(Collision2D col){
-         if(col.gameObject.name.Equals("PlatformMovements")){
-            this.transform.parent = null;
-         }
-    }*/
-
-
-
-    
+    private void Restart(){
+        gameObject.transform.position = startPosition;
+    }
 
 }

@@ -30,9 +30,7 @@ public class Bullet : MonoBehaviour
         Debug.Log(other.gameObject.name);
         Destroy(gameObject);
         
-    }
-
-    }
+    }}
 
     void Awake () { Destroy (gameObject, lifeTime); }
 }

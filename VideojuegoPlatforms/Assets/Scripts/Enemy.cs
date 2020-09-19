@@ -47,7 +47,9 @@ public class Enemy : MonoBehaviour
         if( Life <= 0 ){
             Destroy(gameObject);
             WinnerText.gameObject.SetActive(true);
+            
         } 
+       
     }
 
     void Shoot(){

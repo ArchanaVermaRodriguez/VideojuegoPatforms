@@ -10,6 +10,8 @@ TagManager:
   - Sneeze
   - RainDrops
   - Bullet
+  - Edge
+  - PillPlatform
   layers:
   - Default
   - TransparentFX
